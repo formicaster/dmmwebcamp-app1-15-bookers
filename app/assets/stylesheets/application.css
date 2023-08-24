@@ -83,3 +83,20 @@ p,ol,ul,td {
   line-height: 18px;
   margin: 33px;
 }
+
+a {
+  color: #000;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.field,.action {
+  margin-bottom: 10px;
+}
