@@ -1,24 +1,26 @@
 <h1>Editing Book</h1>
 <% if @book.errors.any? %>
-  <%= @book.errors.count %> errors prohibited this book from being saved:
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
+  <div class="error_explanation">
+    <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
 
 <%= form_with model: @book do |f| %>
-  <div class="field">
+  <div class="field <%= 'error-field' if @book.errors[:title].any? %>">
     <label>Title</label>
     <%= f.text_field :title %>
   </div>
-  
-  <div class="field">
+
+  <div class="field <%= 'error-field' if @book.errors[:body].any? %>">
     <label>Body</label>
     <%= f.text_area :body %>
   </div>
-  
+
   <div class="action">
     <%= f.submit 'Update Book' %>
   </div>
