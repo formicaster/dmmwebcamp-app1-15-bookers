@@ -30,3 +30,12 @@
   color: #930403;
   border: solid 1px #930403;
 }
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
